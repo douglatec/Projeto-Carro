@@ -5,7 +5,11 @@ using System.Text;
 
 namespace ProjetoCarro.Dominio
 {
-    class ModelException
+    class ModelException:Exception
     {
+        public ModelException(string msg) : base(msg) 
+        {
+        
+        }
     }
 }
