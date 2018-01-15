@@ -24,9 +24,21 @@ namespace ProjetoCarro.Dominio
         }
 
 
+        public void addCarro(Carro c) 
+        {
+            carro.Add(c);
+            //carro.Sort();
+        }
+
+
         public override string ToString()
         {
-            return codigo + ", " + nome +", " + pais + ", Número de carros: " +carro.Count.ToString();
+            return codigo
+                + ", " + nome
+                + ", "
+                + pais
+                +", Numero de carros: " + carro.Count;               
+          
         }
     }
 }

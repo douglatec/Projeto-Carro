@@ -12,14 +12,16 @@ namespace ProjetoCarro.Dominio
         public string modelo { get; set; }
         public int ano { get; set; }
         public double precoBasico { get; set; }
+        public Marca marca { get; set; }
 
 
-        public Carro(int codigo, string modelo, int ano, double precoBasico) 
+        public Carro(int codigo, string modelo, int ano, double precoBasico, Marca marca) 
         {
             this.codigo = codigo;
             this.modelo = modelo;
             this.ano = ano;
-            this.precoBasico = precoBasico;        
+            this.precoBasico = precoBasico;
+            this.marca = marca;
         }
 
 
