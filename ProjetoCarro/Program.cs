@@ -59,10 +59,7 @@ namespace ProjetoCarro
                 if (opcao==1)
                 {
 
-                for(int i=0;i<listaDeMarca.Count;i++)
-                {
-                Console.WriteLine(listaDeMarca[i]);
-                }
+                
                 
                 }
                 else if (opcao==2)

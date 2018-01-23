@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Globalization;
 
 namespace ProjetoCarro.Dominio
 {
@@ -9,18 +10,22 @@ namespace ProjetoCarro.Dominio
     {
         public string nome { get; set; }
         public double preco { get; set; }
+        public Carro carro { get; set; }
 
 
-        public Acessorio(string nome, double preco) 
+        public Acessorio(string nome, double preco, Carro carro) 
         {
             this.nome = nome;
-            this.preco = preco;        
+            this.preco = preco;
+            this.carro = carro;
         }
 
 
-       /* public override string ToString()
+        public override string ToString()
         {
-            return ;
-        }*/
+            return nome
+                +", Preço: "
+                +preco.ToString("F2",CultureInfo.InvariantCulture);            
+        }
     }
 }

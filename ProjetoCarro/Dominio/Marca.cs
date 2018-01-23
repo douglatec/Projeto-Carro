@@ -27,7 +27,7 @@ namespace ProjetoCarro.Dominio
         public void addCarro(Carro c) 
         {
             carro.Add(c);
-            //carro.Sort();
+            carro.Sort();
         }
 
 
