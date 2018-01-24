@@ -54,12 +54,21 @@ namespace ProjetoCarro
             
             Console.Clear();
             Tela.mostrarMenu();
+
+            try
+            {
                 opcao = int.Parse(Console.ReadLine());
+            }
+            catch (Exception e) 
+            {
+                Console.WriteLine("Erro Inesperado: " + e.Message);
+                opcao = 0;
+            }
             
                 if (opcao==1)
                 {
 
-                
+                    Tela.listarCarrosDeUmaMarca();
                 
                 }
                 else if (opcao==2)
@@ -67,22 +76,71 @@ namespace ProjetoCarro
                     Tela.listarCarrosDeUmaMarca();
                 
                 }
+                else if(opcao==3)
+                {
+                    try
+                    {
+                        Tela.cadastrarMarca();
+                    }
+                    catch (Exception e) 
+                    {
+                        Console.WriteLine("Erro Inesperado: " + e.Message);
+                    }
+                }
+                else if(opcao==4)
+                {
+                    try
+                    {
+
+                    }
+                    catch (ModelException e)
+                    {
+                        Console.WriteLine("Erro de negocio: " + e.Message);
+                    }
+                    catch(Exception e)
+                    {
+                        Console.WriteLine("Erro inesperado: " + e.Message);
+                    }
+                }
+                else if(opcao==5)
+                {
+                    try
+                    {
+                        Tela.cadastrarAcessorio();
+                    }
+                    catch(Exception e)
+                    {
+                        Console.WriteLine("Erro inesperado: " + e.Message);
+                    }
+                }
+                else if (opcao==6)
+                {
+                    try 
+                    {
+                        Tela.mostrarCarro(listaDeCarro);
+                    }
+                        catch(ModelException e)
+                    {
+                        Console.WriteLine("Erro de negocio: " + e.Message);
+                        }
+                    catch(Exception e)
+                    {
+                        Console.WriteLine("Erro inesperado: " + e.Message);
+                    }
+                }
+                else if (opcao == 7)
+                {
+                    Console.WriteLine("Fim do programa!");
+                }
+                else 
+                {
+                    Console.WriteLine("Opção invalida!");
+                    Console.WriteLine();
+                }
 
              Console.ReadLine();
             
             }
-
-        
-
-
-           
-
-
-
-            
-
-
-
         }
     }
 }
